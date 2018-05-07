@@ -7,11 +7,22 @@
         <container name="page.top" as="page_top" label="After Page Header" after="header.container"/>
         <container name="footer-container" as="footer" before="before.body.end" label="Page Footer Container" htmlTag="footer" htmlClass="page-footer" />
     </referenceContainer> -->
-    <referenceBlock name="logo">
+    <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+      <body>
+        <referenceBlock name="logo">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/custom_logo.png</argument>
+            <!-- <argument name="logo_img_width" xsi:type="number">300</argument>  -->
+            <argument name="logo_img_height" xsi:type="number">300</argument>
+          </arguments>
+        </referenceBlock>
+      </body>
+    </page>
+    <!-- <referenceBlock name="logo">
         <arguments>
             <argument name="logo_file" xsi:type="string">images/logo.png</argument>
             <argument name="logo_img_width" xsi:type="number">300</argument>
-            <!-- <argument name="logo_img_height" xsi:type="number">43</argument> -->
+            <argument name="logo_img_height" xsi:type="number">43</argument>
         </arguments>
-    </referenceBlock>
+    </referenceBlock> -->
 </layout>
